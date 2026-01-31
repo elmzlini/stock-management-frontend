@@ -29,7 +29,7 @@ Tools: Node.js, npm, VS Code
 
 ```bash
 # Clonez le projet
-git clone [votre-url-github]
+git clone [https://github.com/elmzlini/stock-management-frontend]
 
 # Allez dans le dossier
 cd gestion-stock
