@@ -1,0 +1,54 @@
+/* Navigation Animations */
+@keyframes slideInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse-gradient {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(6, 182, 212, 0.7);
+  }
+}
+
+/* Smooth transitions */
+nav a {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+nav a:hover {
+  transform: translateY(-2px);
+}
+
+nav a.active {
+  animation: pulse-gradient 2s ease-in-out infinite;
+}
+
+/* Badge animation */
+span[class*="badge"] {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+/* Mobile menu animation */
+@media (max-width: 768px) {
+  nav {
+    animation: slideInDown 0.3s ease-out;
+  }
+}
